@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #8b8b8b;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================== */
+/* CREATING THE SOCIAL BUTTONS */
+/* =========================== */
+#social-buttons {
+    height: 10rem;
+    width: 14rem;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 2.7rem;
+}
+
+.fa-linkedin-in,
+.fa-github {
+
+    color: whitesmoke;
+    transition: linear 0.2s;
+}
+
+.fa-linkedin-in:hover,
+.fa-github:hover {
+
+    color: rgb(26, 161, 224);
+    transform: scale(1.1, 1.1);
+}
+
+/* ======================= */
+/* CREATING THE CALCULATOR */
+/* ======================= */
+.calculator {
+    width: 27rem;
+    height: 35rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    border: 4px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+
+    display: grid;
+    grid-template-areas: "display-text      display-text    display-text    display-text"
+                         "btn-ac            btn-ce          btn-invert      btn-divide"
+                         "btn-7             btn-8           btn-9           btn-multiply"
+                         "btn-4             btn-5           btn-6           btn-substract"
+                         "btn-1             btn-2           btn-3           btn-sum"
+                         "btn-0             btn-decimal     btn-equals      btn-equals";
+    
+    
+    grid-gap: 6px;
+}
+
+/* DISPLAY TEXT */
+.positional {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pre-result {
+    width: 100%;
+    height: 30%;
+    text-align: right;
+    font-size: 22px;
+    color: gray;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#result {
+    width: 100%;
+    height: 50%;
+    text-align: right;
+    font-size: 26px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+/* BUTTONS */
+.btn {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: linear 0.1s;
+    background-color: #c5c5c5;
+}
+
+.btn-function:hover {
+    background-color: rgb(43, 226, 125);
+}
+
+.btn-operator:hover {
+    background-color: rgb(226, 128, 0);
+}
+
+.btn-number:hover {
+    background-color: rgb(43, 183, 226);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* CALCULATOR ITEMS */
+#display-text {
+    max-width: 27rem;
+    max-height: 35rem;
+    text-align: center;
+    background-color: #dfdfdf;
+    border-radius: 4px;
+
+    grid-area: display-text;
+}
+
+#btn-ac {
+    grid-area: btn-ac;
+}
+
+#btn-ce {
+    grid-area: btn-ce;
+}
+
+#btn-invert {
+    grid-area: btn-invert;
+}
+
+#btn-divide {
+    grid-area: btn-divide;
+}
+
+#btn-multiply {
+    grid-area: btn-multiply;
+}
+
+#btn-substract {
+    grid-area: btn-substract;
+}
+
+#btn-sum {
+    grid-area: btn-sum;
+}
+
+#btn-decimal {
+    grid-area: btn-decimal;
+}
+
+#btn-equals {
+    grid-area: btn-equals;
+}
+
+#btn-9 {
+    grid-area: btn-9;
+}
+
+#btn-8 {
+    grid-area: btn-8;
+}
+
+#btn-7 {
+    grid-area: btn-7;
+}
+
+#btn-6 {
+    grid-area: btn-6;
+}
+
+#btn-5 {
+    grid-area: btn-5;
+}
+
+#btn-4 {
+    grid-area: btn-4;
+}
+
+#btn-3 {
+    grid-area: btn-3;
+}
+
+#btn-2 {
+    grid-area: btn-2;
+}
+
+#btn-1 {
+    grid-area: btn-1;
+}
+
+#btn-0 {
+    grid-area: btn-0;
+}
